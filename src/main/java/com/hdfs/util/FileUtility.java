@@ -86,10 +86,10 @@ public class FileUtility {
         
         public void usage(Options options) {
             HelpFormatter formatter = new HelpFormatter();
-            formatter.printHelp(
-                            "java -cp `hadoop classpath` com.hdfs.util.FileUtility [--op-thread <no of thread to perform the operation,default 1>] [--op-type <webhdfs://<namenode>/> | <hdfs://<namenode:port/> > >, default hdfs protocol] [--op-conf <specify the conf directory>] [--op-wait <Specify the operation/transaction wait time in millisecond,default 0ms>]  --src <source dir> --dest=<destination dir>  [--increment <copy the same file with increment>] >>   2>/tmp/_progress.log\n",
-                            options);
-            System.exit(-1);
+         formatter.printHelp(
+                            "java -cp `hadoop classpath` com.hdfs.util.FileUtility --src <source dir> --dest <destination dir>  [--increment <limit> copy the same file with increment eg --increment 10]  [--op-thread <no of thread to perform the operation,default 1>] [--op-type <webhdfs://<namenode>/> | <hdfs://<namenode:port/>, default hdfs protocol] [--op-conf <specify the conf directory>] [--op-wait <Specify the operation/transaction wait time in millisecond,default 0ms>]",
+                            options);   
+         System.exit(-1);
     }
         
         //validating the user input
